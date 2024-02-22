@@ -1,0 +1,10 @@
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\bin\Debug\HashFill.exe.config
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\bin\Debug\HashFill.exe
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\bin\Debug\HashFill.pdb
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csproj.AssemblyReference.cache
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.Form1.resources
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.Properties.Resources.resources
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csproj.GenerateResource.cache
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csproj.CoreCompileInputs.cache
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.exe
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.pdb
