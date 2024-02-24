@@ -56,7 +56,7 @@ namespace HashFill
                         ? null
                         : FindNode(data, startWithNode.RightNode);
         }
-        public void PrintTree(int key, Node<string> startNode, TextBox treeOutput, string indent = "", Side? side = null)
+        public void PrintTree(int key, Node<string> startNode, RichTextBox treeOutput, string indent = "", Side? side = null)
         {
             if (startNode != null)
             {

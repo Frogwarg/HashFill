@@ -34,7 +34,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chainTable = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.treeOutput = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buildBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -43,6 +42,7 @@
             this.findBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.collisionLabel = new System.Windows.Forms.Label();
+            this.treeOutput = new System.Windows.Forms.RichTextBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openTable)).BeginInit();
@@ -57,7 +57,7 @@
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Location = new System.Drawing.Point(12, 29);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(411, 446);
@@ -83,9 +83,10 @@
             this.openTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.openTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.openTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.openTable.Location = new System.Drawing.Point(7, 7);
+            this.openTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.openTable.Location = new System.Drawing.Point(3, 3);
             this.openTable.Name = "openTable";
-            this.openTable.Size = new System.Drawing.Size(390, 408);
+            this.openTable.Size = new System.Drawing.Size(397, 414);
             this.openTable.TabIndex = 0;
             // 
             // tabPage2
@@ -108,9 +109,10 @@
             this.chainTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.chainTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.chainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.chainTable.Location = new System.Drawing.Point(7, 7);
+            this.chainTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chainTable.Location = new System.Drawing.Point(3, 3);
             this.chainTable.Name = "chainTable";
-            this.chainTable.Size = new System.Drawing.Size(390, 408);
+            this.chainTable.Size = new System.Drawing.Size(397, 414);
             this.chainTable.TabIndex = 1;
             // 
             // tabPage3
@@ -122,16 +124,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Бинарное дерево";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // treeOutput
-            // 
-            this.treeOutput.Location = new System.Drawing.Point(4, 4);
-            this.treeOutput.Multiline = true;
-            this.treeOutput.Name = "treeOutput";
-            this.treeOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.treeOutput.Size = new System.Drawing.Size(396, 413);
-            this.treeOutput.TabIndex = 0;
-            this.treeOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // groupBox1
             // 
@@ -213,11 +205,24 @@
             this.collisionLabel.TabIndex = 6;
             this.collisionLabel.Text = "Среднее колличество коллизий:";
             // 
+            // treeOutput
+            // 
+            this.treeOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeOutput.DetectUrls = false;
+            this.treeOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeOutput.Location = new System.Drawing.Point(0, 0);
+            this.treeOutput.Name = "treeOutput";
+            this.treeOutput.Size = new System.Drawing.Size(403, 420);
+            this.treeOutput.TabIndex = 0;
+            this.treeOutput.Text = "";
+            this.treeOutput.WordWrap = false;
+            this.treeOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 487);
+            this.ClientSize = new System.Drawing.Size(677, 467);
             this.Controls.Add(this.collisionLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.findBtn);
@@ -236,7 +241,6 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chainTable)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,7 +263,7 @@
         private System.Windows.Forms.Label collisionLabel;
         private System.Windows.Forms.DataGridView openTable;
         private System.Windows.Forms.DataGridView chainTable;
-        private System.Windows.Forms.TextBox treeOutput;
+        private System.Windows.Forms.RichTextBox treeOutput;
     }
 }
 

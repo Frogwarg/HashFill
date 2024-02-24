@@ -28,8 +28,7 @@ namespace HashFill
             table.Columns.Add("Hash-value", "Хеш-значение");
             table.Columns.Add("id", "Идентификатор");
         }
-
-        public void getText()
+        public bool getText()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text Files|*.txt";
@@ -53,7 +52,9 @@ namespace HashFill
             else
             {
                 MessageBox.Show("Ошибка");
+                return false;
             }
+            return true;
         }
         public bool FillTable(int func, int method, ref int collisions)
         {
@@ -171,46 +172,42 @@ namespace HashFill
         }
         private void buildBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (!getText())
             {
-                getText();
-                collisions = 0;
-                bool success = false;
-                int func = 0;
-                while (!success)
+                return;
+            }
+            collisions = 0;
+            bool success = false;
+            int func = 0;
+            while (!success)
+            {
+                switch (comboBox1.SelectedIndex)
                 {
-                    switch (comboBox1.SelectedIndex)
-                    {
-                        case 0:
-                            openTable.Rows.Clear();
-                            break;
-                        case 1:
-                            chainTable.Rows.Clear();
-                            break;
-                        case 2:
-                            treeOutput.Text = "";
-                            break;
-                    }
-                    success = FillTable(func, comboBox1.SelectedIndex, ref collisions);
-                    tabControl.SelectedTab = tabControl.TabPages[comboBox1.SelectedIndex];
-                    ++func;
-                    if (!success)
-                    {
-                        MessageBox.Show("Так как количество коллизий(" + collisions + ") превысило порог, то будет проведено рехеширование");
-                    }
-                    if (func > 1 && !success)
-                    {
-                        MessageBox.Show("Хеш функции закончились, рехеширование не удалось");
+                    case 0:
+                        openTable.Rows.Clear();
                         break;
-                    }
+                    case 1:
+                        chainTable.Rows.Clear();
+                        break;
+                    case 2:
+                        treeOutput.Text = "";
+                        break;
                 }
-                collisionLabel.Text = string.Format("Среднее количество коллизий: {0:f2}", ((double)collisions / (double)source.Length));
-                filled = true;
+                success = FillTable(func, comboBox1.SelectedIndex, ref collisions);
+                tabControl.SelectedTab = tabControl.TabPages[comboBox1.SelectedIndex];
+                ++func;
+                if (!success)
+                {
+                    MessageBox.Show("Так как количество коллизий(" + collisions + ") превысило порог, то будет проведено рехеширование");
+                }
+                if (func > 1 && !success)
+                {
+                    MessageBox.Show("Хеш функции закончились, рехеширование не удалось");
+                    break;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            collisionLabel.Text = string.Format("Среднее количество коллизий: {0:f2}", ((double)collisions / (double)source.Length));
+            filled = true;
         }
         private void findBtn_Click(object sender, EventArgs e)
         {
