@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HashFill
@@ -29,13 +25,13 @@ namespace HashFill
                 ? currentNode
                 : result < 0
                     ? currentNode.LeftNode == null
-                        ? (currentNode.LeftNode = node)
+                        ? (currentNode.LeftNode = node)                         //если элементы одинаковые, то он не добавляет их
                         : Add(node, currentNode.LeftNode)
                     : currentNode.RightNode == null
                         ? (currentNode.RightNode = node)
                         : Add(node, currentNode.RightNode);*/
             return (result = node.Data.CompareTo(currentNode.Data)) < 0
-                   ? currentNode.LeftNode == null
+                   ? currentNode.LeftNode == null                               //если элементы одинаковые, то он добавляет их
                        ? (currentNode.LeftNode = node)
                        : Add(node, currentNode.LeftNode)
                    : currentNode.RightNode == null
@@ -46,6 +42,7 @@ namespace HashFill
         {
             startWithNode = startWithNode ?? root;
             int result;
+            if (startWithNode == null) return null;
             return (result = data.CompareTo(startWithNode.Data)) == 0
                 ? startWithNode
                 : result < 0
@@ -63,7 +60,6 @@ namespace HashFill
                 var nodeSide = side == null ? key.ToString() : side == Side.Left ? "L" : "R";
                 treeOutput.Text += string.Format($"{indent}[{nodeSide}] - {startNode.Data}") + Environment.NewLine;
                 indent += new string(' ', 8);
-                //рекурсивный вызов для левой и правой веток
                 PrintTree(key, startNode.LeftNode, treeOutput, indent, Side.Left);
                 PrintTree(key, startNode.RightNode, treeOutput, indent, Side.Right);
             }

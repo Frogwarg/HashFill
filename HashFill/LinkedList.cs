@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HashFill
 {
@@ -27,13 +24,6 @@ namespace HashFill
             tail = node;
 
             count++;
-        }
-        // очистка списка
-        public void Clear()
-        {
-            head = null;
-            tail = null;
-            count = 0;
         }
         // содержит ли список элемент
         public bool Contains(T data)

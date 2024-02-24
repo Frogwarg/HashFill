@@ -34,6 +34,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chainTable = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.treeOutput = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buildBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,7 @@
             this.findBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.collisionLabel = new System.Windows.Forms.Label();
-            this.treeOutput = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openTable)).BeginInit();
@@ -125,6 +126,19 @@
             this.tabPage3.Text = "Бинарное дерево";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // treeOutput
+            // 
+            this.treeOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeOutput.DetectUrls = false;
+            this.treeOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeOutput.Location = new System.Drawing.Point(0, 0);
+            this.treeOutput.Name = "treeOutput";
+            this.treeOutput.Size = new System.Drawing.Size(403, 420);
+            this.treeOutput.TabIndex = 0;
+            this.treeOutput.Text = "";
+            this.treeOutput.WordWrap = false;
+            this.treeOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buildBtn);
@@ -199,30 +213,27 @@
             // collisionLabel
             // 
             this.collisionLabel.AutoSize = true;
-            this.collisionLabel.Location = new System.Drawing.Point(457, 436);
+            this.collisionLabel.Location = new System.Drawing.Point(446, 427);
             this.collisionLabel.Name = "collisionLabel";
             this.collisionLabel.Size = new System.Drawing.Size(171, 13);
             this.collisionLabel.TabIndex = 6;
             this.collisionLabel.Text = "Среднее колличество коллизий:";
             // 
-            // treeOutput
+            // label2
             // 
-            this.treeOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeOutput.DetectUrls = false;
-            this.treeOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeOutput.Location = new System.Drawing.Point(0, 0);
-            this.treeOutput.Name = "treeOutput";
-            this.treeOutput.Size = new System.Drawing.Size(403, 420);
-            this.treeOutput.TabIndex = 0;
-            this.treeOutput.Text = "";
-            this.treeOutput.WordWrap = false;
-            this.treeOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(446, 445);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Среднее число попыток поиска:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 467);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.collisionLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.findBtn);
@@ -264,6 +275,7 @@
         private System.Windows.Forms.DataGridView openTable;
         private System.Windows.Forms.DataGridView chainTable;
         private System.Windows.Forms.RichTextBox treeOutput;
+        private System.Windows.Forms.Label label2;
     }
 }
 
