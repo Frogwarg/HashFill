@@ -215,18 +215,18 @@
             this.collisionLabel.AutoSize = true;
             this.collisionLabel.Location = new System.Drawing.Point(446, 427);
             this.collisionLabel.Name = "collisionLabel";
-            this.collisionLabel.Size = new System.Drawing.Size(171, 13);
+            this.collisionLabel.Size = new System.Drawing.Size(195, 13);
             this.collisionLabel.TabIndex = 6;
-            this.collisionLabel.Text = "Среднее колличество коллизий:";
+            this.collisionLabel.Text = "Среднее колличество коллизий: 0,00";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(446, 445);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 13);
+            this.label2.Size = new System.Drawing.Size(194, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Среднее число попыток поиска:";
+            this.label2.Text = "Среднее число попыток поиска: 0,00";
             // 
             // Form1
             // 

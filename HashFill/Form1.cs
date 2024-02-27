@@ -132,10 +132,10 @@ namespace HashFill
             elem.valueOpen = word;
             if (hashTable[elem.key].key >= 0)
             {
-                while (!hashTable[elem.key].valueOpen.Contains(word) && tries < HashTable.M)
+                while (hashTable[elem.key].valueOpen != word && tries < HashTable.M)
                 {
                     elem.nextStep(tries);
-                    if (hashTable[elem.key].valueOpen.Contains(word))
+                    if (hashTable[elem.key].valueOpen == word)
                     {
                         break;
                     }
@@ -231,6 +231,14 @@ namespace HashFill
             {
                 return;
             }
+            foreach(string word in source)
+            {
+                if (word.Length < 2)
+                {
+                    MessageBox.Show("Есть слово, короче двух букв");
+                    return;
+                }
+            }
             collisions = 0;
             bool success = false;
             int func = 0;
@@ -278,14 +286,18 @@ namespace HashFill
                 return;
             }
             int tries = 1;
+            if (word.Length < 2)
+            {
+                MessageBox.Show("Слово меньше 2-х букв");
+                return;
+            }
             HashTable elem = new HashTable();
             elem.hashFuncTwoLetter(word);
             bool notFound = false;
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    int result = openFind(hashTable, elem, ref tries, word);
-                    if (result == -1)
+                    if (openFind(hashTable, elem, ref tries, word) == -1)
                     {
                         notFound = true;
                     } break;
@@ -324,7 +336,7 @@ namespace HashFill
             }
             foreach (DataGridViewRow row in current.Rows)
             {
-                row.DefaultCellStyle.BackColor = default;
+                row.DefaultCellStyle.BackColor = Color.White;
             }
             for (int i = 0; i < current.Rows.Count; i++)
             {
