@@ -7,4 +7,4 @@ E:\Теория формальных языков и методы трансля
 E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csproj.CoreCompileInputs.cache
 E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.exe
 E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.pdb
-E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csprojResolveAssemblyReference.cache
+E:\Теория формальных языков и методы трансляции\ЛБ 1\HashFill\HashFill\obj\Debug\HashFill.csproj.AssemblyReference.cache

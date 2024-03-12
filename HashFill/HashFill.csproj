@@ -85,5 +85,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Files\apples%281%29.txt" />
+    <Content Include="Files\apples.txt" />
+    <Content Include="Files\en_words.txt" />
+    <Content Include="Files\ru_names.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
